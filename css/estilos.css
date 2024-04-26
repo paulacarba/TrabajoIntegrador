@@ -1,0 +1,698 @@
+*{
+    color: blanchedalmond;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans';
+}
+
+/* ANIMACION HEARTBEAT --> ancla logo header index.html y detalles.html */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background:  rgb(157, 22, 35);
+}
+
+/* BODY INDEX.HTML */
+body{
+    background-color: rgb(59, 49, 49);
+    color: blanchedalmond;
+}
+
+/* HEADER ESTILOS PARA ESCRITORIO --> index.html y  detalles.html*/
+header{
+    background-color: rgb(157, 22, 35); 
+    color: blanchedalmond;
+    height: 12vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+        .anclaLogo{
+            color: blanchedalmond;
+            text-decoration: none;    
+            font-weight: 800;
+            font-size: 1.3rem;
+            transition: trnasform 0.3s ease;
+            &:hover{
+                animation: heartbeat 1s infinite;
+            }
+        }
+        .listaNav{
+            list-style: none;
+            display: flex;
+            text-align: center;
+            .listaItem{
+                margin-right: 20px;
+                .linkNav{
+                    text-decoration: none;
+                    color: blanchedalmond;
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                    padding: 0.5rem 1rem;
+                    transition: box-shadow0.3s, background-color 0.3s, color 0.3s;
+                    &:hover{
+                        background-color: blanchedalmond;
+                        color: rgb(157, 22, 35);
+                        border: 2px solid black; 
+                        border-radius: 5px;
+                    }
+                }
+                .linkNav.iniciarSesion{
+                    background-color: black;
+                    color: blanchedalmond;
+                    border-radius: 5px;
+                    &:hover{
+                        background-color: blanchedalmond;
+                        color: black;
+                    }
+                }       
+            }
+        }
+    }
+} /* FIN HEADER --> index y detalles.html*/
+
+/* ESTILOS HEADER PARA MOBILE Y TABLET */
+@media (max-width: 768px){
+    header{
+        height: 17vh;
+        .navegacion{
+            flex-direction: column;
+            row-gap: 20px;
+            .anclaLogo{
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-align: center;
+            }
+            .listaNav {
+                padding: initial;
+                display: flex;
+                justify-content: space-around;
+                .listaItem {
+                    margin: 0;
+                    margin-left: 2px;
+                    margin-bottom: 10px;
+                    .linkNav{
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                        border: 2px solid blanchedalmond;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ESTILOS MAIN PARA ESCRITORIO --> index.html*/
+main{
+    /* SECCION PRINCIPAL */
+    .seccionPrincipal{
+        background-image: linear-gradient(to right top, #0e0d0d8a, #000000f2), url(../assets/img/banner-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .tituloPrincipal{
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+        .subtituloPrincipal{
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .botonRegistro{
+            background-color: rgb(157, 22, 35);
+            color: blanchedalmond;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            &:hover{
+                background-color: blanchedalmond;
+                color: rgb(157, 22, 35);
+                border: 2px solid black;
+            }
+        }
+    }/* FIN SECCION PRINCIPAL */
+
+    /* SECCION BUSCADOR */
+    .seccionBuscador{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .tituloBuscador{
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding: 3.5rem;
+        }
+        .buscadorPeliculas{
+            margin-bottom: 0.5rem;
+            padding-bottom: 3.5rem;
+            .inputBuscador{
+                color: rgb(157, 22, 35);
+                padding: 10px;
+                width: 400px;
+                height: 40px;
+                font-size: 1.2rem;
+                border-radius: 20px;
+            }
+            .inputBuscador::placeholder{
+                color: rgb(33, 27, 28);
+                font-weight: 100;
+                text-align: left;
+                padding: 10px;
+            }
+            .botonBuscador{
+                background-color: rgb(157, 22, 35);
+                color: blanchedalmond;
+                border-radius: 20px;
+                border-color: blanchedalmond;
+                width: 100px;
+                height: 40px;
+                font-size: 1.2rem;
+                transition: transform 0.3s, box-shadow 0.3s;
+                &:hover{
+                    background-color: blanchedalmond;
+                    color: rgb(157, 22, 35);
+                    border: 2px solid black;
+                }
+            }   
+        }
+    } /* FIN SECCION BUSCADOR */
+
+    /* HR */
+    hr{
+        height: 5px;
+        background-color: rgb(157, 22, 35);
+        text-align: center;
+        border-radius: 15px;
+        margin: 50px;
+    } /* FIN HR */
+
+    /* SECCIÓN TENDENCIAS */
+    .peliculasTendencia{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        .tituloSection{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .pelicula{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            .imgTendencia{
+                width: 18rem;
+                display: block;
+                position: relative;
+                transition: opacity 0.3s ease-in;
+            }
+            .imgTendencia:hover{
+                opacity: 0.5;
+            }
+            .carousel-caption{
+                position: static;
+            }
+        }
+    }/* FIN SECCION TENDENCIAS */
+
+    /* SECCIÓN ACLAMADAS*/
+    .peliculasAclamadas{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        .tituloSection{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .aclamadas{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0px 0px 40px 0px;
+            .peliculaItem{
+                width: 150px;
+                min-width: 150px;
+                margin-left: 20px;
+                .imgAclamadas{
+                    width: 95%;
+                    height: 95%;
+                    object-fit: cover;
+                    border: 2px solid blanchedalmond;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    transition: transition opacity 0.3 ease-in;
+                    &:hover{
+                        border: 2px solid rgb(157, 22, 35);
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }/* FIN SECCION ACLAMADAS */
+}
+
+/* ESTILOS MAIN PARA MOBILE Y TABLET */
+@media (max-width:768px) {
+    main{
+        .seccionPrincipal{
+            height: 50vh;
+            .tituloPrincipal{
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+            .subtituloPrincipal{
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            .botonRegistro{
+                border: 2px solid blanchedalmond;
+            }
+        }
+        .seccionBuscador{
+            .tituloBuscador{
+                font-size: 1.5rem;
+                text-align: center;
+                padding: 2rem;
+                }
+            .buscadorPeliculas{
+                .inputBuscador{
+                    font-size: 1rem;
+                    height: 40px;
+                    width: 250px;
+                }
+            }
+        }
+    
+        .peliculasTendencia{
+            font-size: 2rem;
+        }
+
+        .peliculasAclamadas{
+            .tituloSection{
+                font-size: 2rem;
+            }
+            .aclamadas{
+                .peliculaItem{
+                    min-width: 130px;
+                }
+            }
+        }
+    }
+}
+    
+/* FOOTER ESTILOS PARA ESCRITORIO */
+footer{
+        background-color: rgb(157, 22, 35);
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 0;
+        .listaNav{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            .listaItem{
+                margin-right: 20px;
+                .linkNav{
+                    text-decoration: none;
+                    color: blanchedalmond;
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                    padding: 0.5rem 1rem;
+                    transition: box-shadow0.3s, background-color 0.3s, color 0.3s;
+                    &:hover{
+                        background-color: blanchedalmond;
+                        color: rgb(157, 22, 35);
+                        border: 2px solid black; 
+                        border-radius: 5px;
+                    }
+                }
+                .administradorPelicula{
+                    color: blanchedalmond;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    padding: 0.5rem 1rem;
+                    background-color: black;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    &:hover{
+                        background-color: blanchedalmond;
+                        color: black;
+                    }    
+                }
+            }
+        }
+    }
+
+/* ESTILOS FOOTER PARA MOBILE Y TABLET */
+@media (max-width:768px){
+    footer{
+        height: initial;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        .listaNav{
+            flex-direction: column;
+            row-gap: 15px;
+            .listaItem{
+                .linkNav{
+                    font-size: 1rem;
+                }
+                .administradorPelicula{
+                    padding: 0.5rem 0.8rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .flechaArriba{
+            padding-left: 20px;
+        }
+    }
+}
+
+/* BODY REGISTRO PARA ESCRITORIO*/
+.bodyRegistro{
+    height: 100vh;
+    background: linear-gradient(to right top, #24242473, #24242473), url(../assets/img/bg-register.jpg); 
+    background-size: cover;
+    background-position: center;
+}    
+/* HEADER  PARA ESCRITORIO--> registrarse.html */
+.headerRegistro{
+    color: blanchedalmond;
+    height: 10vh;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    .anclaLogoRegistro{
+        text-decoration: none; 
+        color: blanchedalmond;   
+        font-weight: 800;
+        font-size: 1.3rem;
+        transition: trnasform 0.3s ease;
+        &:hover{
+            animation: heartbeat 1s infinite;
+        }
+    }
+}
+/* MAIN PARA ESCRITORIO --> registrarse.html */
+.main{
+    .seccionRegistrarse{
+        background-color:rgb(50, 48, 48);
+        width: 40%;
+        margin:0 auto;
+        margin-top: 1rem;
+        border: 2px solid blanchedalmond;
+        border-radius: 10px;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size:1.2rem;
+        .tituloRegistrarse{
+            font-size: 2.5rem;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        form{
+            width: 90%;
+            padding:40px;
+            margin-top: 1.5rem;
+            input:not(.check,.boton),select{
+                width: 100%;
+                margin-bottom: 10px;
+                height: 40px;
+                padding: 0px 20px;
+                font-size: 1.2rem;
+                border-radius: 20px;
+                border: 2px solid #9f3647;
+                background-color: #333333;
+                outline: none;
+                color:rgb(255, 255, 255);
+            }
+            .error input:not(.check,.boton),.error select{
+                border: 1px solid rgb(157, 22, 35);
+            }
+            .error-text{
+                color:  rgb(157, 22, 35);
+                font-size: 0.8rem;
+                margin-top:0px;
+                margin-bottom: 10px;
+            }
+            .terminos{
+                font-size: 0.8rem;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                .textoCheck{
+                margin-left: 10px;
+            }
+            }
+            .boton{
+                width: 87%;
+                box-sizing: content-box;
+                background-color:#9f3647;
+                border: 2px solid #9f3647;
+                color: #ffffff;
+                padding: 1rem 1rem;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-weight: 500;
+                transition: 0.3s;
+                &:hover{
+                    background-color: blanchedalmond;
+                    color: rgb(157, 22, 35);
+                    border: solid 1px rgb(157, 22, 35);
+                }
+            }
+            .ayuda{
+                margin-top:40px;
+                font-size: 1rem;
+                text-decoration: none;
+                color: #787878;
+                font-weight:400;
+            }
+        }
+    }
+}
+
+/* ESTILOS MAIN PARA MOBILE Y TABLET --> registrarse.html*/
+@media (max-width:768px){
+    .headerRegistro{
+        .anclaLogoRegistro{
+            font-size: 1.1rem;
+        }
+    }
+    .main{
+        .seccionRegistrarse{
+            width: 90%;
+            padding: 0;
+            form{
+                padding: 40px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/* MAIN DETALLES.HTML PARA ESCRITORIO*/
+.mainDetalle{
+    /* SECCION DETALLE */
+    .detalle{
+        background: linear-gradient(to right top, #6d6969a7, #6d6969a7), url(../assets/img/mario-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        .contenedorDetalle{
+            display: flex;
+            align-items: center;
+            margin-left: 10rem;
+            margin-right: 10rem;
+            img{
+                border-radius: 20px;
+            }
+            .textoDetalle{
+                margin-left: 5rem;
+                h1{
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+                h2{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin-top: 1rem;
+                }
+                p{
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+                .contenedorCreditos{
+                    font-size: 1rem;
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }/* FIN SECTION DETALLE */
+
+    /* SECTION TRAILER */
+    .trailer{
+        padding-top: 150px;
+        padding-bottom: 100px;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 55px;
+        .contenedorTrailer{
+            margin-left: 50px;
+            h2{
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+        .contenedorInfo{
+            text-align: left;
+            margin-left: 60px;
+            .redes{
+                margin-bottom: 20px;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    column-gap: 20px;
+                    a{
+                        text-decoration: none;
+                        color: blanchedalmond;
+                        font-size: 2.5rem;
+                        margin-right: 5rem;
+                        i{
+                            color: blanchedalmond;
+                            transition: color 0.3s, transform 0.3s ease;
+                            &:hover{
+                                color:rgb(157, 22, 35);
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+            .info{
+                table{
+                    th{
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                    width: 100%;
+                    tr{
+                        td{
+                            font-size: 1.2rem;
+                            padding: 10px 0;
+                        }
+                    }
+                }
+        }
+        }
+    }
+}
+
+/*  ESTILOS MAIN PARA MOBILE Y TABLET --> detalles.html* */
+@media (max-width:780px){
+    .mainDetalle{
+        .detalle{
+            height: 160vh;
+            position: initial;
+            .contenedorDetalle{
+                flex-direction: column;
+                row-gap: 20px;
+                .imagenDetalle{
+                    margin-top: 70px;
+                }
+                .textoDetalle{
+                    margin: 0;
+                    width: 400px;
+                    h1{
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                    h2{
+                        margin: 0;
+                    }
+                    .contenedorCreditos{
+                        flex-direction: column;
+                        row-gap: 10px;
+                    }
+                }
+            }
+        }
+        .trailer{
+            width: 95%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            row-gap: 20px;
+            .contenedorTrailer{
+                width: 100%;
+                h2{
+                    margin-bottom: 20px;
+                }
+                iframe{
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+            .contenedorInfo{
+                width: 100%;
+                .redes{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    li{
+                        a{
+                            font-size: 2rem;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
