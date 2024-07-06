@@ -143,6 +143,7 @@ main{
             font-size: 2rem;
             font-weight: 500;
             margin-bottom: 2rem;
+            align-items: center;
         }
         .botonRegistro{
             background-color: rgb(157, 22, 35);
@@ -698,22 +699,40 @@ footer{
     }
 }
 
-/* MAIN crud.HTML */
-
-main{
+.main{
     h1{
         text-align: center;
-        font-size: 2.5rem;
-        font-weight: 700;
+    }
+    .sectionFormulario
+    {
+        color:white;
+        width: 60%; 
+        margin: auto;
+    }
+    #boton{
+        text-align: center;
         margin-top: 10px;
     }
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .itemForm{
-
-        }
+    .sectionFormularioTabla
+    {
+        color:white;
+        width: 60%; 
+        margin: auto; 
     }
 
+    th, td {
+        border: 1px solid #9f3647;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #9f3647; /* Fondo negro para resaltar el texto blanco */
+        color: white ; /* Texto en blanco */
+        text-align: center;
+    }
+
+    td {
+        color: white; /* Texto en blanco */
+        text-align: center;
+    }
 }
